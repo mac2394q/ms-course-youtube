@@ -7,7 +7,7 @@ plugins {
 
 group = 'academy.digitallab.store'
 version = '0.0.1-SNAPSHOT'
-sourceCompatibility = '11'
+sourceCompatibility = '1.8'
 
 configurations {
 	compileOnly {
@@ -30,11 +30,20 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	implementation 'org.springframework.boot:spring-boot-starter-actuator'
 	implementation 'org.springframework.cloud:spring-cloud-starter-config'
+<<<<<<< Updated upstream
 	implementation 'org.springframework.cloud:spring-cloud-starter-netflix-eureka-client'
 	compile group: 'de.codecentric', name: 'spring-boot-admin-starter-client', version: '2.2.1'
 	implementation 'org.springframework.cloud:spring-cloud-starter-sleuth'
+=======
+	implementation 'org.testng:testng:7.1.0'
+	//implementation 'org.springframework.cloud:spring-cloud-starter-netflix-eureka-client'
+//	implementation 'org.springframework.cloud:spring-cloud-starter-sleuth'
+>>>>>>> Stashed changes
 	compileOnly 'org.projectlombok:lombok'
 	runtimeOnly 'com.h2database:h2'
+	testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+	testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+	testImplementation group: 'junit', name: 'junit', version: '4.4'
 	annotationProcessor 'org.projectlombok:lombok'
 	testImplementation('org.springframework.boot:spring-boot-starter-test') {
 		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'

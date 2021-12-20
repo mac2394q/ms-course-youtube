@@ -91,6 +91,8 @@ public class ProductController {
         }
         return ResponseEntity.ok(product);
     }
+
+
     private String formatMessage( BindingResult result){
         List<Map<String,String>> errors = result.getFieldErrors().stream()
                 .map(err ->{
